@@ -1,0 +1,14 @@
+{% extends 'pets/base.html' %}
+
+{% block title %}Início - PetShop Pro{% endblock %}
+
+{% block content %}
+<div class="container text-center mt-5 pt-5">
+    <h1 class="display-4 fw-bold text-dark">A melhor gestão para o seu Pet Shop</h1>
+    <p class="lead text-muted mt-3">Organize clientes, pets e relatórios em um único lugar.</p>
+    
+    <a href="{% url 'painel' %}" class="btn btn-primary btn-lg mt-4 px-5 rounded-pill shadow-lg">
+        Entrar no Sistema
+    </a>
+</div>
+{% endblock %}

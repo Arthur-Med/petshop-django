@@ -1,0 +1,56 @@
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    min-height: 100vh; 
+}
+
+/* Nossa nova barra lateral escura */
+.sidebar {
+    min-width: 260px;
+    max-width: 260px;
+    background-color: #1e1e2f; 
+    color: #fff;
+}
+
+/* Estilo dos links do menu */
+.sidebar .nav-link {
+    color: #8b8ea5;
+    padding: 15px 25px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+/* Efeito ao passar o mouse ou quando a página estiver ativa */
+.sidebar .nav-link:hover, .sidebar .nav-link.active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #0d6efd; 
+}
+
+/* Área onde a tabela e os cards vão ficar */
+.main-content {
+    width: 100%;
+    padding: 30px;
+    background-color: #f4f5f9; 
+}
+
+.caixa-animada {
+    animation: liquidEnter 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.caixa-saindo {
+    animation: liquidExit 0.3s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    pointer-events: none;
+}
+
+@keyframes liquidEnter {
+    0% { opacity: 0; transform: translateY(20px) scale(0.98); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes liquidExit {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(-20px) scale(0.98); }
+}   
